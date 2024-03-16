@@ -1,6 +1,6 @@
-import datetime
-import playsound
-import winsound
+from datetime import datetime
+from playsound import playsound
+# import winsound
 
 
 # strip function: quita espacios del texto o elementos
@@ -17,6 +17,7 @@ alarm_period = alarm_time[6:8].upper()
 
 
 print("setting alarm ..........'")
+print(datetime.now())
 
 while True:
     current_time= datetime.now()
@@ -31,8 +32,8 @@ while True:
       print('*'*10)
       if music_or_beep=='m':
         playsound('audio.wav')
-      else:
-        winsound.Beep(freq,dur)
+      # else:
+      #   winsound.PlaySound("audio.wav",winsound.SND_ASYNC)
       break
 
 
